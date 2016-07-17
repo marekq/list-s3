@@ -1,4 +1,4 @@
-list-s3
+list_s3
 =========
 
 List all file objects stored in S3 buckets attached to an AWS account using AWS API keys. 
@@ -6,7 +6,7 @@ List all file objects stored in S3 buckets attached to an AWS account using AWS 
 Description
 ------------
 
-The list-s3 tool can be used to create timestamped CSV reports about files stored within S3 buckets of an AWS account. This is helpful if you are a user of multiple S3 buckets with nested folders which becomes a bit difficult using just the AWS console view. Using the reports it becomes easy to review files stored in buckets, including information about the owner, access permissions and modification times. 
+The list_s3 tool can be used to create timestamped CSV reports about files stored within S3 buckets of an AWS account. This is helpful if you are a user of multiple S3 buckets with nested folders which becomes a bit difficult using just the AWS console view. Using the reports it becomes easy to review files stored in buckets, including information about the owner, access permissions and modification times. 
 
 
 Example output is shown below;
@@ -40,14 +40,14 @@ Next, edit the 'creds.py' file to include your AWS API credentials as follows;
 
 You can run 'python list_s3.py' to check if the tool works well on your machine and if valid credentials were entered. As an alternative, you can also submit credentials as arguments which can be useful if you want a one time report;
 
-        $ python list-s3.py <aws_access_key> <aws_secret_access_key> <region_name>
+        $ python list_s3.py <aws_access_key> <aws_secret_access_key> <region_name>
 
 Usage
 -----
 
 The tool picks up credentials configured in 'creds.py' in the folders root. 
 
-    $ python list-s3.py
+    $ python list_s3.py
 
 Results of the scan are shown on screen and stored in "results.csv" in the current directory, in addition a timestamped copy of the results file is stored in folder 'results' in the current directory.
 
@@ -58,7 +58,6 @@ It is recommended to create a readonly AWS IAM account specifically for usage wi
 
 I recommend to use the following policy document;
         
-        ```
         {
             "Version": "2012-10-17",
             "Statement": [
@@ -78,10 +77,9 @@ I recommend to use the following policy document;
                 }
             ]
         }
-        ```
-
+        
 
 Contact
 -------
 
-For any questions or fixes, please reach out to @marekq! |
+For any questions or fixes, please reach out to @marekq! 
