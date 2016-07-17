@@ -53,25 +53,27 @@ It is recommended to create a readonly AWS IAM account specifically for usage wi
 
 I recommend to use the following policy document;
         
-        {
-            "Version": "2012-10-17",
-            "Statement": [
-                {
-                    "Effect": "Allow",
-                    "Action": [
-                        "s3:GetBucketAcl",
-                        "s3:GetBucketLocation",
-                        "s3:GetBucketPolicy",
-                        "s3:GetBucketWebsite",
-                        "s3:ListAllMyBuckets",
-                        "s3:ListBuckets"
-                    ],
-                    "Resource": [
-                        "arn:aws:s3:::*"
-                    ]
-                }
-            ]
-        }
+    {
+        "Version": "2012-10-17",
+        "Statement": [
+            {
+                "Effect": "Allow",
+                "Action": [
+                    "s3:GetBucketAcl",
+                    "s3:GetBucketLocation",
+                    "s3:GetBucketPolicy",
+                    "s3:GetBucketWebsite",
+                    "s3:ListAllMyBuckets",
+                    "s3:GetObjectAcl",
+                    "s3:ListBucket",
+                    "s3:ListObjects"
+                ],
+                "Resource": [
+                    "arn:aws:s3:::*"
+                ]
+            }
+        ]
+    }
         
 
 Contact
