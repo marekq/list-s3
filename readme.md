@@ -8,7 +8,6 @@ Description
 
 The list_s3 tool can be used to create timestamped CSV reports about files stored within S3 buckets of an AWS account. This is helpful if you are a user of multiple S3 buckets with nested folders which becomes a bit difficult using just the AWS console view. Using the reports it becomes easy to review files stored in buckets, including information about the owner, access permissions and modification times. 
 
-
 Example output is shown below;
 
 | bucket       | object-name            | object-size  | bucket-region  | bucket-owner  | bucket-permission  | storage-type  | bucket-create-date  | bucket-create-unix  | file-create-date  | file-create-unix | 
@@ -18,11 +17,7 @@ Example output is shown below;
 | marek.rocks  | papers/                | 0            | eu-west-1      | marekq        | FULL_CONTROL       | STANDARD      | 2016-06-05_03-00    | 1465092040          | 2016-06-03_21-36  | 1464986206       |
 | marek.rocks  | papers/lia.pdf         | 1472885      | eu-west-1      | marekq        | FULL_CONTROL       | STANDARD      | 2016-06-05_03-00    | 1465092040          | 2016-06-03_21-36  | 1464986206       |
 | marek.rocks  | papers/ot.pdf          | 476803       | eu-west-1      | marekq        | FULL_CONTROL       | STANDARD      | 2016-06-05_03-00    | 1465092040          | 2016-06-03_21-36  | 1464986207       |
-| marek.rocks  | papers/rp1-slides.pdf  | 2671794      | eu-west-1      | marekq        | FULL_CONTROL       | STANDARD      | 2016-06-05_03-00    | 1465092040          | 2016-06-03_21-36  | 1464986206       |
-| marek.rocks  | papers/rp1.pdf         | 1431145      | eu-west-1      | marekq        | FULL_CONTROL       | STANDARD      | 2016-06-05_03-00    | 1465092040          | 2016-06-03_21-36  | 1464986206       |
-| marek.rocks  | papers/rp2-slides.pdf  | 306426       | eu-west-1      | marekq        | FULL_CONTROL       | STANDARD      | 2016-06-05_03-00    | 1465092040          | 2016-06-03_21-36  | 1464986206       |
-| marek.rocks  | papers/rp2.pdf         | 494491       | eu-west-1      | marekq        | FULL_CONTROL       | STANDARD      | 2016-06-05_03-00    | 1465092040          | 2016-06-03_21-36  | 1464986206       |
-| marek.rocks  | papers/ssn.pdf         | 662517       | eu-west-1      | marekq        | FULL_CONTROL       | STANDARD      | 2016-06-05_03-00    | 1465092040          | 2016-06-03_21-36  | 1464986207       |
+| ...          | ...                    | ...          | ...            | ...           | ...                | ...           | ...                 | ...                 | ...               | ...              |
 
 
 Installation
