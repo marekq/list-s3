@@ -3,6 +3,7 @@ list_s3
 
 List all file objects stored in S3 buckets attached to an AWS account using AWS API keys. 
 
+
 Description
 ------------
 
@@ -37,6 +38,7 @@ You can run 'python list_s3.py' to check if the tool works well on your machine 
 
         $ python list_s3.py <aws_access_key> <aws_secret_access_key> <region_name>
 
+
 Usage
 -----
 
@@ -46,8 +48,9 @@ The tool picks up credentials configured in 'creds.py' in the folders root.
 
 Results of the scan are shown on screen and stored in "results.csv" in the current directory, in addition a timestamped copy of the results file is stored in folder 'results' in the current directory.
 
-AWS permissions
----------------
+
+AWS IAM permissions
+-------------------
 
 It is recommended to create a readonly AWS IAM account specifically for usage with this tool using a minimal amount of priviledges - you don't want someone to read the actual file contents or delete all files if the keys ever get stolen. Never use your root credentials for these kind of reports, always use specific roles for them. 
 
@@ -75,6 +78,15 @@ I recommend to use the following policy document;
         ]
     }
         
+
+Future work
+-----------
+
+- Convert the code to be AWS Lambda compatible 
+- Integrate easy way to push the results to an S3 bucket
+- Make the code work with multiple AWS API keys defined
+- Enable STS support in case multiple accounts are used
+
 
 Contact
 -------
