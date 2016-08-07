@@ -92,6 +92,7 @@ def get_s3_obj(sts_client, name, crea, owne, gran, tok):
 				resu.append(y[:-1])
 				print 'RUN: '+y[:-1]
 
+
 	# if there is a token, retrieve additional files by calling the script again
 	if b.has_key('NextContinuationToken'):
 		tok	= b['NextContinuationToken']
@@ -134,10 +135,9 @@ def put_s3(bucketn, filen):
 	else:
 		sts_client  = session.client('s3', region_name = s3_region_name, aws_access_key_id = s3acck, aws_secret_access_key = s3seck)
 			
-	sts_client.upload_file('/tmp/'+filen, 'lists3marek', filen)
+	sts_client.upload_file('/tmp/'+filen, bucketn, filen)
 				
 				
-# # # # #
 # kick off the lambda function
 
 def lambda_handler(event, context):
