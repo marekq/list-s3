@@ -4,7 +4,6 @@
 # www.marek.rocks
 
 # configure the bucketname to write result CSV file to
-
 bucketn	= 'lists3marek'	
 
 # AWS bucket API key and bucket name to write the CSV file with results to - if you leave these blank, the lambda service role will be used which is prefered
@@ -13,7 +12,6 @@ s3seck = ''
 s3_region_name = 'eu-west-1'
 
 # AWS account to list the S3 buckets and files in them for - if you leave these blank, the lambda service role will be used which is prefered
-
 aws_acck = ''
 aws_seck = ''
 aws_region_name = 'eu-west-1'
@@ -22,9 +20,6 @@ aws_region_name = 'eu-west-1'
 ########## ! # ! # don't touch anything below this line # ! # ! ##########
 
 import boto3, time, re, datetime, json, os, sys
-
-# create timestamp format for strftime
-timest	= '%Y-%m-%d_%H-%M'
 
 # retrieve metadata about all buckets
 def get_s3(aws_acck, aws_seck, aws_sest, aws_region_name):
@@ -68,8 +63,11 @@ def get_s3_obj(sts_client, name, crea, owne, gran, tok):
 	else:
 		b = sts_client.list_objects_v2(Bucket = name, FetchOwner = True, MaxKeys = 1000)
 
+
 	# capture metadata about objects in bucket
 	if b.has_key('Contents'):
+		timest = '%Y-%m-%d_%H-%M'
+
 		for z in b['Contents']:
 			size	= str(z['Size'])
 			skey	= str(z['Key'])
