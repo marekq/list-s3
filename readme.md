@@ -82,8 +82,8 @@ I recommend to use the following policy document;
 Future work
 -----------
 
-- Convert the code to be AWS Lambda compatible 
-- Integrate easy way to push the results to an S3 bucket
+~~- Convert the code to be AWS Lambda compatible~~
+~~- Integrate easy way to push the results to an S3 bucket~~
 - Make the code work with multiple AWS API keys defined
 - Enable STS support in case multiple accounts are used
 
