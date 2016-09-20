@@ -123,7 +123,7 @@ def file_write():
 		f1.write(x+'\n')
 		f1.close
 		
-		put_s3(bucketn, filen)
+	put_s3(bucketn, filen)
 
 
 def put_s3(bucketn, filen):
